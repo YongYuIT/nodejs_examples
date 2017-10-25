@@ -1,7 +1,7 @@
 var async = require("async");
 
 function exec() {
-	async.series({
+	async.parallel({
 		one : function(done) {
 			ii = 0;
 			setInterval(function() {
@@ -19,7 +19,7 @@ function exec() {
 			setInterval(function() {
 				console.log("bbb=" + new Date());
 				jj++;
-				if (jj == 3) {
+				if (jj == 5) {
 					clearInterval(this);
 					done(null, {two:"two执行完毕"});
 				}

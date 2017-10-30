@@ -5,3 +5,4 @@ box.shift();
 console.log(box);
 box.unshift(0);
 console.log(box);
+console.log(this);
